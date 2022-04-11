@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %> 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PokeDex</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+            </ul>
+            <form action="/pokemon/new" class="d-flex">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Create New</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <h2>PokeDex</h2>
+    <div class="animate__animated animate__lightSpeedInLeft">
+    <div class="wrapper">
+        <% for(let i=0; i< allPokemons.length; i++){%>
+            <div class="box">
+                <a href="/pokemon/<%=i%>">
+                <span class="sub-text"><%= allPokemons[i].name%></span>
+                <img class="img-card" src=<%= allPokemons[i].img %>></a></div>
+        <%}%>
+
+    </div>
+    </div>
+</body>
+</html>

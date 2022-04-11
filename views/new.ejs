@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %> 
+<body>
+    <h2>NEW</h2>
+    <form action ="/pokemon" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label  class="form-label mt-4">Create New</label>
+            <input type="type" class="form-control" name="name" placeholder="Name" required>
+            <input type="type" class="form-control" name="type" placeholder="type" required>
+            <input type="number" class="form-control" name="stats[][hp]" placeholder="hp value" required>
+            <input type="number" class="form-control" name="stats[][attack]" placeholder="attack value" required> 
+            <input type="number" class="form-control" name="stats[][defense]" placeholder="defense value" required>   
+            <input type="number" class="form-control" name="stats[][spattack]" placeholder="spattack value" required>   
+            <input type="number" class="form-control" name="stats[][spdefense]" placeholder="spdefense value" required>   
+            <input type="number" class="form-control" name="stats[][speed]" placeholder="speed value" required>   
+            <input type="type" class="form-control" name="misc[][classification]" placeholder="classification" required>  
+            <input type="url" class="form-control" name="img" placeholder="Image URL " required>
+            <input type="type" class="form-control" name="misc[][height]" placeholder="height" required> 
+            <input type="type" class="form-control" name="misc[][weight]" placeholder="weight" required> 
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+    </body>
+    </html>

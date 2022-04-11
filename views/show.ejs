@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %> 
+<body>
+    <div class="card m-5">
+        <h3 class="card-header"><%= pokemon.name.toUpperCase()%></h3>
+        <div class="card-body">
+          <h5 class="card-title">Type:</h5>
+          <h6 class="card-subtitle text-muted"><%= pokemon.type.join(', ') %> </h6>
+        </div>
+          <img class="animate__animated animate__flip" src=<%=pokemon.img%> width="300px">
+
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">STATS: 
+              <ul>
+            <%statsArr.forEach((el)=>{%>
+            <li><%=el[0]%> = <%=el[1]%></li>
+          <% }) %> </ul></li>
+          <li class="list-group-item">CLASS = <%= pokemon.misc.classification%></li>
+          <li class="list-group-item">HEIGHT = <%= pokemon.misc.height%></li>
+          <li class="list-group-item">WEIGHT = <%= pokemon.misc.weight%></li>
+        </ul>
+        <div class="card-body">
+          <a href="/pokemon" class="card-link">POKEDEX</a>
+          <a href="/pokemon/<%=index%>/edit" class="card-link">EDIT</a>
+          <form action="/pokemon/<%= index %>?_method=DELETE" method="post">
+          <p style="text-align: right;" ><input class="delete-b" type="submit" value="DELETE"></p>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
+
