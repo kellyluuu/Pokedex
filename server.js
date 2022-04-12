@@ -70,8 +70,7 @@ app.delete('/pokemon/:id',(req,res)=>{
     res.redirect('/pokemon')
 })
 
-
 // *********************************
 // Server Listener
 // *********************************
-app.listen(PORT,()=>console.log(`POKEDEX RUNNING ON PORT ${PORT}`))
+app.listen(PORT,()=>console.log(`(╯°□°)╯ POKEDEX RUNNING ON PORT ${PORT}`))
