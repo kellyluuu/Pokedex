@@ -70,6 +70,15 @@ app.delete('/pokemon/:id',(req,res)=>{
     res.redirect('/pokemon')
 })
 
+
+
+// 1. Make a copy of the object at pokemonArray at the index and assign it to a new variable {...pokemon[req.params.id]}
+// 2. Verify that req.body is structured in the format that matches what your new object has
+// 3. Use Object.assign to add req.body to our object copy
+// 4. Update pokemonArray[req.params.id] to be the new object
+
+
+
 // *********************************
 // Server Listener
 // *********************************
